@@ -1,0 +1,32 @@
+# Android Studio ile ilgili dosya ve klasörler
+*.iml
+.gradle/
+/local.properties
+/.idea/
+/build/
+/captures/
+/.externalNativeBuild/
+/cxx/
+.DS_Store
+
+# Log dosyaları
+*.log
+
+# Android Studio tarafından oluşturulan dosyalar
+*.apk
+output.json
+
+# IntelliJ ile ilgili dosyalar
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Güvenlik anahtarı dosyaları
+*.jks
+*.keystore
+
+# Google Hizmetleri (örneğin API veya Firebase)
+google-services.json
+
+# Android Profiling dosyaları
+*.hprof

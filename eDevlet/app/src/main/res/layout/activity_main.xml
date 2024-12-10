@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f4f6"
+    android:onClick="kaydet"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgTurkiye"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/tcGiris"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="T.C. Kimlik No"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTurkiye" />
+
+    <EditText
+        android:id="@+id/eDevletGiris"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="e-Devlet Şifresi"
+        android:inputType="textPassword"
+        android:maxLength="8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcGiris" />
+
+    <Button
+        android:id="@+id/btnGiris"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:onClick="giris"
+        android:text="Giriş Yap"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eDevletGiris" />
+
+    <Button
+        android:id="@+id/btnKaydet"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:onClick="kaydet"
+        android:text="Kaydet"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiris" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnKaydet">
+
+        <ImageView
+            android:id="@+id/imgMobilOnay"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mobilonay" />
+
+        <ImageView
+            android:id="@+id/imgKarekodOkut"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/karekodokut" />
+
+        <ImageView
+            android:id="@+id/imgYardim"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/yardim" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+
+        <TextView
+            android:id="@+id/txtMobilOnay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mobil\nOnay"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtKarekodOkut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Karekod\nOkut"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtYardim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yardım"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHizliErisim">
+
+        <ImageView
+            android:id="@+id/imgHavaDurumu"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/havadurumu" />
+
+        <ImageView
+            android:id="@+id/imgAcilToplanma"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/nobetcieczane" />
+
+        <ImageView
+            android:id="@+id/imgNobetciEczane"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/aciltoplanma" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/txtHavaDurumu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hava\nDurumu"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAcilToplanma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Acil\nToplanma"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtNobetciEczane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nöbetçi\nEczane"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtHizliErisim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="HIZLI ERİŞİM"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
